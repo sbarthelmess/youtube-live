@@ -7,7 +7,7 @@
   if (strlen($stream_id)==11) {
           $myFile = "stream.id";
           $fh = fopen($myFile, 'w') or die("can't open file");
-          fwrite($fh, $a);
+          fwrite($fh, $stream_id);
           fclose($fh);
           $SUCCESS=true;
           if (isset($_GET['stream_id'])) exit("SUCCESS, url updated: $stream_id\n");
